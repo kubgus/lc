@@ -15,6 +15,10 @@ struct ListNode {
 };
 
 ostream &operator<<(ostream& os, ListNode* sll) {
+    if (sll == nullptr) {
+        os << "[]";
+        return os;
+    }
     os << '[';
     while (sll->next != nullptr) {
         os << sll->val << ',';
