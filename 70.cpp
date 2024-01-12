@@ -11,9 +11,8 @@ public:
         if (n == 2) return 2;
         long p1 = 2, p2 = 1;
         for (int i = 2; i <= n; i++) {
-            long t = p1;
             p1 += p2;
-            p2 = t;
+            p2 = p1 - p2;
         }
         return p2;
     }
